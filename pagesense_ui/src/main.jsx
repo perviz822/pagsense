@@ -8,19 +8,22 @@ import Register from "./Register.jsx";
 import Test from "./Test.jsx"; // add this
 import ProtectedRoutes from "./ProtectedRoutes.jsx";
 import "./index.css";
+import { AuthProvider } from "./AuthContext.jsx";
+import { AuthContext } from "./AuthContext.jsx";
 
 
 function RootApp() {
-  const [user, setUser] = useState(false);
 
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ProtectedRoutes user={user} />, // secure route
+      element: 
+                   <ProtectedRoutes/>,
+               
       children: [
         {
           index: true,
-          element: <App setUser={setUser} />,
+          element: <App  />,
         },
         {
           path: "test",
@@ -34,11 +37,11 @@ function RootApp() {
     },
     {
       path: "/login",
-      element: <Login setUser={setUser} />,
+      element: <Login  />,
     },
     {
       path: "/register",
-      element: <Register setUser={setUser} />,
+      element: <Register  />,
     },
   ]);
 
@@ -47,6 +50,8 @@ function RootApp() {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RootApp />
+   <AuthProvider>
+     <RootApp />
+   </AuthProvider>
   </StrictMode>
 );
