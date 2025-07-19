@@ -1,0 +1,23 @@
+pagesense_ui/ogs
+pagesense_ui/*.log
+pagesense_ui/npm-debug.log*
+pagesense_ui/yarn-debug.log*
+pagesense_ui/yarn-error.log*
+pagesense_ui/pnpm-debug.log*
+pagesense_ui/lerna-debug.log*
+
+pagesense_ui/node_modules
+pagesense_ui/dist
+pagesense_ui/dist-ssr
+pagesense_ui/*.local
+
+# Editor directories and files
+pagesense_ui/.vscode/*
+!pagesense_ui/.vscode/extensions.json
+pagesense_ui/.idea
+pagesense_ui/.DS_Store
+pagesense_ui/*.suo
+pagesense_ui/*.ntvs*
+pagesense_ui/*.njsproj
+pagesense_ui/*.sln
+pagesense_ui/*.sw?
