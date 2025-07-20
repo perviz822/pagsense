@@ -5,7 +5,7 @@ function Book ({data}){
            <div
             key={data.id}
             className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer"
-            onClick={() => alert(`Open: ${data.title}`)} // Replace with navigation later
+          
           >
             <img
               src={data.image}

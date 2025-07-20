@@ -4,7 +4,7 @@ import { AuthContext } from "./AuthContext";
 import { useContext } from "react";
 export default function Header() {
   const navigate = useNavigate();
-    const { setUser } = useContext(AuthContext);
+  const { setUser } = useContext(AuthContext);
 
   const handleLogout = () => {
      setUser(false);
@@ -18,10 +18,15 @@ export default function Header() {
   <nav className="flex gap-8 text-base font-medium">
     <Link
       to="/test"
-      className="text-gray-700 hover:text-white hover:bg-black transition-colors duration-400 px-2 py-1 rounded-xl"
-    >
+      className="text-gray-700 hover:text-white hover:bg-black transition-colors duration-400 px-2 py-1 rounded-xl" >
       Take a Test
     </Link>
+
+   <Link to= "/upload_book" className="text-gray-700 hover:text-white hover:bg-black transition-colors duration-400 px-2 py-1 rounded-xl">
+   Upload Book
+   </Link>
+
+
     <Link
       to="/gallery"
       className="text-gray-700 hover:text-white hover:bg-black transition-colors duration-400 px-2 py-1 rounded-xl"

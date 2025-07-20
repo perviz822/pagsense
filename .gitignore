@@ -21,3 +21,4 @@ pagesense_ui/*.ntvs*
 pagesense_ui/*.njsproj
 pagesense_ui/*.sln
 pagesense_ui/*.sw?
+cmt.txt

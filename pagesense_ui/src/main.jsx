@@ -9,7 +9,8 @@ import Test from "./Test.jsx"; // add this
 import ProtectedRoutes from "./ProtectedRoutes.jsx";
 import "./index.css";
 import { AuthProvider } from "./AuthContext.jsx";
-import { AuthContext } from "./AuthContext.jsx";
+import BookContent from "./BookContent.jsx";
+import UploadBook from "./UploadBook.jsx";
 
 
 function RootApp() {
@@ -18,7 +19,7 @@ function RootApp() {
     {
       path: "/",
       element: 
-                   <ProtectedRoutes/>,
+          <ProtectedRoutes/>,
                
       children: [
         {
@@ -33,6 +34,15 @@ function RootApp() {
           path: "gallery",
           element: <Gallery />,
         },
+          {
+      path: "/gallery/:id",
+      element: <BookContent  />,
+    },
+
+      {
+      path: "/upload_book",
+      element: <UploadBook  />,
+    },
       ],
     },
     {
@@ -43,6 +53,8 @@ function RootApp() {
       path: "/register",
       element: <Register  />,
     },
+
+   
   ]);
 
   return <RouterProvider router={router} />;

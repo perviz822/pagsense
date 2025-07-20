@@ -1,7 +1,8 @@
 
 import React from "react";
 import Book from "./Book";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+
 
 const books = [
   {
@@ -34,7 +35,9 @@ const Gallery = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {books.map((book) => (
-         <Book data = {book}/>
+       <Link key = {`${book.id}`} to = {`${book.id}`}>
+         <Book key ={book.id} data = {book}/>
+       </Link>
         ))}
       </div>
     </div>
