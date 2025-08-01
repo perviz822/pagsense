@@ -8,7 +8,7 @@ function BookContent(){
 
           <>
     
-         <h1>This page will contain the word list for the book for book wih id :{id} </h1>
+         <h1> This page will contain the word list for the book for book wih id :{id} </h1>
     
           </>
     )

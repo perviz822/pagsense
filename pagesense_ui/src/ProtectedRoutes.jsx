@@ -7,7 +7,6 @@ import Header from "./Header";
 function ProtectedRoutes() {
   const {user} = useContext(AuthContext)
   console.log(user)
-    
   return (
 
     <>
